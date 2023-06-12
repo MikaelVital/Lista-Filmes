@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Filmes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Lista de Filmes</h1>
+  <button id="add-filme-button">Adicionar Filme</button>
+  <div id="add-filme-form-container" style="display: none;">
+    <form id="add-filme-form">
+      <input type="text" id="titulo-input" placeholder="Título" required>
+      <input type="text" id="duracao-input" placeholder="Duração" required>
+      <input type="text" id="genero-input" placeholder="Gênero" required>
+      <input type="number" id="lancamento-input" placeholder="Ano de Lançamento" required>
+      <button type="submit">Adicionar Filme</button>
+    </form>
+  </div>
+  <table id="filmes-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Duração</th>
+        <th>Gênero</th>
+        <th>Ano de Lançamento</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</body>
+</html>
