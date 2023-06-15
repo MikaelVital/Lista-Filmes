@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reviews de Filmes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="reviews.js"></script>
+</head>
+
+<body>
+  <h1>Reviews de Filmes</h1>
+
+  <table id="filmes-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Duração</th>
+        <th>Gênero</th>
+        <th>Ano de Lançamento</th>
+        <th>Review</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div id="review-form-container" style="display: none;">
+    <h2>Adicionar Review</h2>
+    <form id="review-form">
+      <div>
+        <label for="filme-titulo">Título do Filme:</label>
+        <input type="text" id="filme-titulo" readonly>
+      </div>
+      <div>
+        <label for="filme-review">Review:</label>
+        <textarea id="filme-review" rows="4" required></textarea>
+      </div>
+      <div>
+        <button type="submit">Salvar Review</button>
+        <button type="button" id="cancelar-review">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

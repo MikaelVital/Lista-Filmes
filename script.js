@@ -4,9 +4,8 @@ $(document).ready(function() {
   var tabela = $('#filmes-table');
   var addFilmeFormContainer = $('#add-filme-form-container');
 
-  // Função para carregar a lista de filmes na tabela
   function carregarFilmes() {
-    tabela.find('tbody').empty(); // Limpa o corpo da tabela antes de preenchê-lo novamente
+    tabela.find('tbody').empty();
 
     $.each(filmes, function(index, filme) {
       var row = $('<tr>');
@@ -19,7 +18,6 @@ $(document).ready(function() {
     });
   }
 
-  // Função para criar o botão de exclusão
   function createDeleteButton(index) {
     var button = $('<button>');
     button.text('Excluir');
@@ -29,7 +27,6 @@ $(document).ready(function() {
     return button;
   }
 
-  // Função para adicionar um filme à lista
   function adicionarFilme(titulo, duracao, genero, lancamento) {
     var filme = {
       titulo: titulo,
@@ -45,18 +42,15 @@ $(document).ready(function() {
     exibirFormulario(false);
   }
 
-  // Função para excluir um filme da lista
   function excluirFilme(index) {
     filmes.splice(index, 1);
     carregarFilmes();
   }
 
-  // Manipulador de evento para o botão "Adicionar Filme"
   $('#add-filme-button').click(function() {
     exibirFormulario(true);
   });
 
-  // Manipulador de evento para o envio do formulário
   $('#add-filme-form').submit(function(event) {
     event.preventDefault();
     var titulo = $('#titulo-input').val();
@@ -67,7 +61,6 @@ $(document).ready(function() {
     adicionarFilme(titulo, duracao, genero, lancamento);
   });
 
-  // Função para limpar os campos do formulário
   function limparCampos() {
     $('#titulo-input').val('');
     $('#duracao-input').val('');
@@ -75,7 +68,6 @@ $(document).ready(function() {
     $('#lancamento-input').val('');
   }
 
-  // Função para exibir ou ocultar o formulário
   function exibirFormulario(exibir) {
     if (exibir) {
       addFilmeFormContainer.show();
@@ -84,6 +76,11 @@ $(document).ready(function() {
     }
   }
 
-  // Carrega a lista de filmes quando a página é carregada
   carregarFilmes();
+
+  $(document).ready(function() {
+    $("#toggle-theme-button").click(function() {
+      $("body").toggleClass("light-mode dark-mode");
+    });
+  });
 });

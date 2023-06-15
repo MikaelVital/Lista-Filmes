@@ -10,7 +10,7 @@ h1 {
   color: #333;
 }
 
-#add-filme-button {
+#add-filme-button, #toggle-theme-button{
   display: block;
   margin: 0 auto 20px;
   padding: 10px 20px;
@@ -88,4 +88,71 @@ h1 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#review-form-container {
+  display: none;
+}
+
+#review-form-container h2 {
+  color: #333;
+}
+
+#review-form-container label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+#review-form-container input[type="text"],
+#review-form-container textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+#review-form-container button[type="submit"],
+#review-form-container button[type="button"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#review-form-container button[type="button"] {
+  background-color: #f44336;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  color: inherit;
+}
+
+input,
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+
+table {
+  color: inherit;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#add-filme-form-container {
+  background-color: inherit;
 }
